@@ -1,4 +1,5 @@
 from preguntas import *
+
 preguntas = preguntas(lista_preguntas)
 alternativas = alternativas(lista_preguntas)
 respuestas = respuestas(lista_preguntas)
@@ -9,10 +10,9 @@ def inicia_juego():
     numero_pregunta = 0
     while numero_pregunta < len(preguntas):
         print()
-        print('Pregunta: ', preguntas[numero_pregunta])
+        print('Pregunta: ',  preguntas[numero_pregunta])
         for al in alternativas[numero_pregunta]:
             print('   ', alternativas[numero_pregunta].index(al) + 1,':' , al)
-
 
         opcion_usuario = valida_opcion_usuario()
         if alternativas[numero_pregunta][int(opcion_usuario) - 1] == respuestas[numero_pregunta]:
